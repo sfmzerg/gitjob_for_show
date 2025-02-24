@@ -1,0 +1,14 @@
+services:
+  api:
+    image: registry.gitjob.com/gitjob-api:latest
+    ports:
+      - 8000:8000
+    environment:
+      - API_TOKEN=${API_TOKEN}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASS=${DB_PASS}
+    env_file:
+      - .env
